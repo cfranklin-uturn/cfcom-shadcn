@@ -10,13 +10,19 @@ import {
   IconFileAi,
   IconFileDescription,
   IconFileWord,
-  IconFolder,
+  IconFolderFilled,
   IconHelp,
   IconListDetails,
   IconReport,
   IconSearch,
   IconSettings,
   IconUsers,
+  IconHomeFilled,
+  IconUserFilled,
+  IconBriefcaseFilled,
+  IconArticleFilled,
+  IconMusic,
+  IconPrinter,
 } from "@tabler/icons-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -41,29 +47,29 @@ const data = {
   },
   navMain: [
     {
-      title: "Dashboard",
+      title: "Home",
       url: "#",
-      icon: IconDashboard,
+      icon: IconHomeFilled,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
+      title: "About Me",
+      url: "/about",
+      icon: IconUserFilled,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Resume",
+      url: "/resume",
+      icon: IconBriefcaseFilled,
     },
     {
       title: "Projects",
       url: "#",
-      icon: IconFolder,
+      icon: IconFolderFilled,
     },
     {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
+      title: "Blog",
+      url: "/blog",
+      icon: IconArticleFilled,
     },
   ],
   navClouds: [
@@ -133,19 +139,14 @@ const data = {
   ],
   documents: [
     {
-      name: "Data Library",
+      name: "Music Production",
       url: "#",
-      icon: IconDatabase,
+      icon: IconMusic,
     },
     {
-      name: "Reports",
+      name: "3D Printing",
       url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
+      icon: IconPrinter,
     },
   ],
 }
