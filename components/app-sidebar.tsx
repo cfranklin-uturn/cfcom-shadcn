@@ -12,7 +12,6 @@ import {
   IconFileWord,
   IconFolder,
   IconHelp,
-  IconInnerShadowTop,
   IconListDetails,
   IconReport,
   IconSearch,
@@ -159,11 +158,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              className="data-[slot=sidebar-menu-button]:!p-6 data-[slot=sidebar-menu-button]:min-h-30"
             >
-            {<a href="#">
-            <IconInnerShadowTop className="!size-5" />
-            <span className="text-base font-semibold">Acme Inc.</span>
+            {<a href="#" className="flex items-center gap-2">
+            <Image
+              src="/CFLogo.png"
+              alt="CF Logo"
+              width={300}
+              height={100}
+              className=""
+            />
             </a>}
             </SidebarMenuButton>
           </SidebarMenuItem>
