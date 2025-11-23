@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   IconCamera,
   IconFileAi,
@@ -41,7 +42,7 @@ const data = {
   navMain: [
     {
       title: "Home",
-      url: "#",
+      url: "/",
       icon: IconHomeFilled,
     },
     {
@@ -154,7 +155,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-6 data-[slot=sidebar-menu-button]:min-h-30"
             >
-            {<a href="#" className="flex items-center gap-2">
+            {<Link href="/" className="flex items-center gap-2">
             <Image
               src="/CFLogo.png"
               alt="CF Logo"
@@ -162,7 +163,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               height={100}
               className=""
             />
-            </a>}
+            </Link>}
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
