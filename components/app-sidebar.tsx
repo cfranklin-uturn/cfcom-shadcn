@@ -80,7 +80,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-6 data-[slot=sidebar-menu-button]:min-h-30"
+              className="data-[slot=sidebar-menu-button]:p-6! data-[slot=sidebar-menu-button]:min-h-30"
             >
             {<Link href="/" className="flex items-center gap-2">
             <Image
