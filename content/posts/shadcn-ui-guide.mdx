@@ -1,0 +1,79 @@
+---
+title: "Building Modern UIs with shadcn/ui"
+date: "2024-11-28"
+excerpt: "A deep dive into building beautiful, accessible user interfaces using shadcn/ui components and how they integrate with modern React applications."
+tags: ["shadcn/ui", "react", "ui", "design systems"]
+published: true
+---
+
+# Building Modern UIs with shadcn/ui
+
+When it comes to building modern React applications, choosing the right UI library can make or break your development experience. Today, I want to share why shadcn/ui has become my go-to choice for building interfaces.
+
+## What Makes shadcn/ui Different
+
+Unlike traditional component libraries that you install as a dependency, shadcn/ui takes a different approach:
+
+- **Copy, don't install** - Components are copied into your codebase
+- **Full customization** - You own the code, modify as needed
+- **Radix primitives** - Built on accessible, unstyled primitives
+- **Tailwind integration** - Seamless styling with utility classes
+
+## Key Benefits
+
+### 1. Accessibility First
+All components are built on Radix UI primitives, which means:
+- Screen reader support out of the box
+- Proper keyboard navigation
+- ARIA attributes handled automatically
+
+### 2. Customization Freedom
+Since you own the code:
+- Modify behavior without fighting the library
+- Add your own variants and styling
+- No version lock-in concerns
+
+### 3. Performance
+- Only include components you actually use
+- No large bundle sizes from unused components
+- Tree-shaking works perfectly
+
+## Example: Building a Card Component
+
+Here's how easy it is to create a card component:
+
+```tsx
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+export function ProjectCard({ title, description, tags }) {
+  return (
+    <Card className="hover:shadow-lg transition-shadow">
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">{description}</p>
+        <div className="flex gap-2 mt-4">
+          {tags.map(tag => (
+            <Badge key={tag} variant="secondary">{tag}</Badge>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+```
+
+## Getting Started
+
+Setting up shadcn/ui in your Next.js project is straightforward:
+
+1. Initialize the configuration
+2. Add components as needed
+3. Customize to your heart's content
+
+The developer experience is fantastic, and the results speak for themselves.
+
+## Conclusion
+
+If you're building a React application and want beautiful, accessible components without the constraints of a traditional UI library, give shadcn/ui a try. You won't be disappointed!
