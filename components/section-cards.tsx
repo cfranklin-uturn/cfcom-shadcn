@@ -1,6 +1,8 @@
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react"
+import { IconTrendingDown, IconTrendingUp, IconArrowRight } from "@tabler/icons-react"
+import Link from "next/link"
 
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardAction,
@@ -9,30 +11,39 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { getAllPosts } from "@/lib/posts"
 
 export function SectionCards() {
+  const posts = getAllPosts()
+  const latestPost = posts[0]
+
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Total Revenue</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,250.00
+          <CardDescription>Latest Blog Post</CardDescription>
+          <CardTitle className="text-lg font-semibold leading-tight @[250px]/card:text-xl">
+            {latestPost ? latestPost.title : "No posts yet"}
           </CardTitle>
-          <CardAction>
-            <Badge variant="outline">
-              <IconTrendingUp />
-              +12.5%
-            </Badge>
-          </CardAction>
         </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Trending up this month <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Visitors for the last 6 months
-          </div>
+        <CardFooter className="flex-col items-start gap-3 text-sm">
+          {latestPost ? (
+            <>
+              <div className="text-muted-foreground line-clamp-2">
+                {latestPost.excerpt || "Click to read more about this post..."}
+              </div>
+              <Button variant="outline" size="sm" asChild>
+                <Link href={`/blog/${latestPost.slug}`} className="flex items-center gap-2">
+                  Read More
+                  <IconArrowRight className="size-3" />
+                </Link>
+              </Button>
+            </>
+          ) : (
+            <div className="text-muted-foreground">
+              No blog posts available
+            </div>
+          )}
         </CardFooter>
       </Card>
       <Card className="@container/card">

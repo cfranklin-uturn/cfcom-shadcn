@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/sidebar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { getAllSlugs, getPostBySlug } from "@/lib/posts"
 import { format } from "date-fns"
 import { notFound } from "next/navigation"
@@ -56,8 +57,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </Button>
               </div>
               
-              <article className="prose prose-slate dark:prose-invert max-w-none">
-                <header className="not-prose mb-8">
+              <Card>
+                <CardHeader className="pb-6">
                   <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
                   <div className="flex items-center gap-4 text-muted-foreground mb-4">
                     <time dateTime={post.date}>
@@ -73,10 +74,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       ))}
                     </div>
                   )}
-                </header>
-                
-                <MDXRemote source={post.content} />
-              </article>
+                </CardHeader>
+                <CardContent>
+                  <article className="prose prose-slate dark:prose-invert max-w-none">
+                    <MDXRemote source={post.content} />
+                  </article>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
