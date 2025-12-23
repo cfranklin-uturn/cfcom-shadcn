@@ -3,7 +3,6 @@ personalInfo:
   name: "Carson H. Franklin"
   title: "Cloud Computing Architect"
   address: "Monterey, CA 93940"
-  phone: "207-555-0123"
   email: "carson@example.com"
   website: "www.carsonhfranklin.com"
   linkedin: "linkedin.com/in/carsonhfranklin"
@@ -14,6 +13,12 @@ experience:
   - position: "Senior AWS Cloud Architect"
     company: "Uturn Data Solutions"
     period: "2023 - Present"
+    skills:
+      - "AWS/Azure"
+      - "Infrastructure as Code (Terraform / Azure ARM)"
+      - "GitOPS/Kubernetes/Docker/Containerization"
+      - "Enterprise Systems Design"
+      - "Advanced Networking including SDWAN and VPN Connectivity"
     achievements:
       - "Completed successful migration and modernization projects for enterprise clients running workloads with run rates exceeding $4m per year"
       - "Architected solutions for clients in public, private, and tightly controlled industries (Government and Private Satellite Systems)"
@@ -24,6 +29,13 @@ experience:
   - position: "Technical Co-Founder / President"
     company: "Franklin Technology Management, Inc."
     period: "2007 - 2022"
+    skills:
+      - "Managed IT Services"
+      - "Windows Server"
+      - "Active Directory"
+      - "AWS/Azure"
+      - "Enterprise Systems Design"
+      - "Advanced Networking including SDWAN and VPN Connectivity"
     achievements:
       - "Planned, executed, and supported complex IT Projects for over 30 different clients. (SMB, Mid-Market, State, Federal, and Law Enforcement)"
       - "Guided clients through major changes to IT operations and functioned as the contracted Project Manager and vCIO for several enterprise and federal clients"
@@ -36,6 +48,10 @@ experience:
   - position: "Founder"
     company: "Elevate Cloud Solutions, Inc."
     period: "2020 - 2021"
+    skills:
+      - "AWS/Azure"
+      - "Windows Virtual Desktop"
+      - "Enterprise Systems Design"
     achievements:
       - "Pitched the business concept to outside investors from Angel and Venture Capital organizations"
       - "Secured outside investors, managed and formed an advisory board consisting of business leaders, attorneys, entrepreneurs, and investors"
@@ -43,6 +59,10 @@ experience:
   - position: "Co-Founder"
     company: "1Up Cloud, LLC"
     period: "2017 - 2019"
+    skills:
+      - "AWS/Azure"
+      - "GitOPS/Kubernetes/Docker/Containerization"
+      - "Advanced Networking including SDWAN and VPN Connectivity"
     achievements:
       - "Co-Founded an LLC with 2 other partners to provide web design, hosting, and digital marketing services to small and mid-size businesses"
       - "Designed, implemented, and supported a fully customized hosting platform based on Amazon Web Services (S3, Route 53, EC2), Microsoft Office 365, Docker, and Ubuntu Linux"
@@ -62,7 +82,7 @@ certifications:
   - name: "AWS Certified Solutions Architect"
     year: "2023"
   - name: "Citrix Certified Systems Administrator"
-  - year: "2018"
+    year: "2018"
   - name: "Cisco Certified Networking Associate"
     year: "2003"
   - name: "Microsoft Certified Professional"
@@ -81,20 +101,20 @@ skills:
   - "Advanced Networking including SDWAN and VPN Connectivity"
 
 software:
-  - name: "JavaScript/TypeScript"
+  - name: "Amazon Web Services"
     level: 5
-  - name: "React/Next.js"
+  - name: "Microsoft Azure"
     level: 5
-  - name: "Node.js"
+  - name: "Google Cloud Platform"
     level: 5
-  - name: "Python"
+  - name: "Hashicorp Terraform"
     level: 4
-  - name: "AWS/Cloud Platforms"
+  - name: "Kubernetes"
     level: 4
-  - name: "Docker/Kubernetes"
+  - name: "AI Profeciency"
+    level: 4
+  - name: "PostgreSQL/MSSQL"
     level: 3
-  - name: "PostgreSQL/MongoDB"
-    level: 4
 
 languages:
   - name: "English"

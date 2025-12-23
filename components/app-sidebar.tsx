@@ -57,6 +57,11 @@ const data = {
       url: "/blog",
       icon: IconArticleFilled,
     },
+    {
+      title: "Music",
+      url: "/music",
+      icon: IconMusic,
+    },
   ],
   documents: [
     {
