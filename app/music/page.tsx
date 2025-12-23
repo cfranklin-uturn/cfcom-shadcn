@@ -77,7 +77,7 @@ export default function MusicPage() {
                 {tracks.map((track, index) => (
                   <div key={track.id} className="space-y-3">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary">
+                      <div className="shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary">
                         {index + 1}
                       </div>
                       <div className="flex-1 min-w-0">
